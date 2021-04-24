@@ -1,0 +1,22 @@
+---
+- name: Filebeat
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: download
+      get_url:
+        url: https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-amd64.deb
+        dest: filebeat-7.6.1-amd64.deb
+
+    - name: install
+      shell:
+        cmd: dpkg -i filebeat-7.6.1-amd64.deb
+
+    - name: override config
+      copy:
+        src: filebeat-configuration.yml
+        dest: /etc/filebeat/filebeat.yml
+
+    - name: run
+      shell:
+        cmd: filebeat modules enable system && filebeat setup && filebeat -e &
