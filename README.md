@@ -22,26 +22,13 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
 
-  Load balancing protect the servers from a DoS attack. A load balancer distributes network or application traffic amongst the         servers. One benefit of a jumpbox is that it provides a controlled means of acccess between your virtual machines from attackers.
+  Load balancing protects the servers from a DoS attack. A load balancer distributes network or application traffic amongst the servers. One benefit of a jumpbox is that it provides a controlled means of acccess between your virtual machines from attackers.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log files and system performance.
-
-TODO: What does Filebeat watch for?
-TODO: What does Metricbeat record?
-
+  log files monitored for Filebeat
+  
 The configuration details of each machine may be found below.
 Note: Use the Markdown Table Generator to add/remove values from the table.
-
-## Deployment
-
-Files:
-1. elk-playbook.yml: install and launch sebp/elk container on ELK server
-2. filebeat-configuration.yml: the pre-defined configuration file of Filebeat which has updated Kibana and Elasticsearch server information
-3. filebeat-playbook.yml: ansible playbook file to be run on Ansible container on Jumpbox to install Filebeat on both Web1 and Web2 servers
-4. metricbeat-configuration.yml: the pre-defined configuration file of Metricbeat which has updated Kibana and Elasticsearch server information
-5. metricbeat-playbook.yml: ansible playbook file to be run on Ansible container on Jumpbox to install Metricbeat on both Web1 and Web2 servers
-
-## Virtual machines
 
 | Name        | Function          |  IP address        | Operating System   | 
 | ----------- | ----------------- | ------------------ | ------------------ | 
@@ -118,3 +105,11 @@ Metricbeat
 
 https://imgur.com/a/H81GlPP
 
+## Deployment
+
+Files:
+1. elk-playbook.yml: install and launch sebp/elk container on ELK server
+2. filebeat-configuration.yml: the pre-defined configuration file of Filebeat which has updated Kibana and Elasticsearch server information
+3. filebeat-playbook.yml: ansible playbook file to be run on Ansible container on Jumpbox to install Filebeat on both Web1 and Web2 servers
+4. metricbeat-configuration.yml: the pre-defined configuration file of Metricbeat which has updated Kibana and Elasticsearch server information
+5. metricbeat-playbook.yml: ansible playbook file to be run on Ansible container on Jumpbox to install Metricbeat on both Web1 and Web2 servers
