@@ -1,8 +1,7 @@
-# Project 1 - Setup systems on Azure cloud
+# Project 1 - Automated ELK Stack Deployment
 
-This project is to setup infrastructure on Azure cloud
+The files in this repository were used to configure the network depicted below.
 
-## Diagram
 https://imgur.com/a/d5AZkP1
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
